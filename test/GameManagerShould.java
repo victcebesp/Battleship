@@ -12,7 +12,7 @@ import static org.junit.Assert.assertTrue;
  *   - Solo puede haber 2 barcos de longitud 3
  *   - Solo puede haber 2 barcos de longitud 4
  *   - Solo puede haber 1 barco de longitud 5
- *
+ *   - Un valor de una coordenada no puede ser mayor a 7 o menor de 0
  *
  */
 
