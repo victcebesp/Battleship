@@ -12,14 +12,17 @@ public class Boat{
     private void addCoordinate(Coordinate firstCoordinate, Coordinate secondCoordinate) {
         if (firstCoordinate.xPos() == secondCoordinate.xPos()){
 
-            int firstPos = firstCoordinate.yPos();
-            int secondPos = secondCoordinate.yPos();
-            for (int i = firstPos; i <= secondPos; i++) {
-                coordinateList.add(new Coordinate(firstCoordinate.xPos(), i));
+            if (theBoatIsNotValid(firstCoordinate, secondCoordinate)){
+                System.out.println("Error! Boat is not valid");
+            }else{
+                int firstPos = firstCoordinate.yPos();
+                int secondPos = secondCoordinate.yPos();
+                for (int i = firstPos; i <= secondPos; i++) {
+                    coordinateList.add(new Coordinate(firstCoordinate.xPos(), i));
+                }
             }
 
         }else{
-
             int firstPos = firstCoordinate.xPos();
             int secondPos = secondCoordinate.xPos();
             for (int i = firstPos; i <= secondPos; i++) {
@@ -27,6 +30,10 @@ public class Boat{
             }
 
         }
+    }
+
+    private boolean theBoatIsNotValid(Coordinate firstCoordinate, Coordinate secondCoordinate) {
+        return !(Math.abs(secondCoordinate.yPos() - firstCoordinate.yPos()) >= 1);
     }
 
     public boolean searchFor(Coordinate coordinate) {

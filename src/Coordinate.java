@@ -15,6 +15,7 @@ public class Coordinate {
         return yPos;
     }
 
+    @Override
     public boolean equals(Object obj){
 
         return this.xPos() == ((Coordinate) obj).xPos() &&
