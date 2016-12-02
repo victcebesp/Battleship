@@ -1,2 +1,3 @@
-public enum state {
+enum State {
+    PLACING;
 }
