@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -42,22 +41,16 @@ public class Player {
         return pendingBoatsList.size();
     }
 
+    public List<Boat> board() {
+        return board;
+    }
+
     public void placeBoat(Boat boat) {
         if (translate.get(boat.length()) == null){
             return;
         }
 
-        List<Coordinate> allCoordinates = board.stream()
-                .flatMap(boat1 -> boat1.getCoordinates().stream())
-                .collect(Collectors.toList());
-
-        Boolean found = boat.getCoordinates().stream().anyMatch(coordinate1 -> {
-            for(Coordinate coordinate2 : allCoordinates) {
-                if(coordinate1.equals(coordinate2)) return true;
-            }
-            return false;
-        });
-
+        Boolean found = lookForOverlappedCoordinatesIn(boat);
 
         if (!found && pendingBoatsList.remove(translate.get(boat.length()))){
             board.add(boat);
@@ -65,7 +58,19 @@ public class Player {
 
     }
 
-    public List<Boat> board() {
-        return board;
+    private boolean lookForOverlappedCoordinatesIn(Boat boat) {
+        return boat.getCoordinates().stream().anyMatch(coordinate1 -> {
+            for(Coordinate coordinate2 : getAllCoordinates()) {
+                if(coordinate1.equals(coordinate2)) return true;
+            }
+            return false;
+        });
     }
+
+    private List<Coordinate> getAllCoordinates() {
+        return board.stream()
+                    .flatMap(boat1 -> boat1.getCoordinates().stream())
+                    .collect(Collectors.toList());
+    }
+
 }
