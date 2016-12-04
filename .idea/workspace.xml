@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Battleship/Boat.class" afterPath="$PROJECT_DIR$/out/production/Battleship/Boat.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Battleship/Coordinate.class" afterPath="$PROJECT_DIR$/out/production/Battleship/Coordinate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Battleship/Player.class" afterPath="$PROJECT_DIR$/out/production/Battleship/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Battleship/PlayerShould.class" afterPath="$PROJECT_DIR$/out/test/Battleship/PlayerShould.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Boat.java" afterPath="$PROJECT_DIR$/src/Boat.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Coordinate.java" afterPath="$PROJECT_DIR$/src/Coordinate.java" />
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PlayerShould.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerShould.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/PlayerShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="41" column="19" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="609">
+              <caret line="77" column="72" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,7 +67,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="753">
@@ -120,9 +119,9 @@
         <option value="$PROJECT_DIR$/src/State.java" />
         <option value="$PROJECT_DIR$/src/BoardType.java" />
         <option value="$PROJECT_DIR$/src/Coordinate.java" />
-        <option value="$PROJECT_DIR$/test/PlayerShould.java" />
         <option value="$PROJECT_DIR$/src/Boat.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
+        <option value="$PROJECT_DIR$/test/PlayerShould.java" />
       </list>
     </option>
   </component>
@@ -703,7 +702,7 @@
       <workItem from="1478975638525" duration="8930000" />
       <workItem from="1480078490849" duration="248000" />
       <workItem from="1480703536944" duration="11459000" />
-      <workItem from="1480882694268" duration="590000" />
+      <workItem from="1480882694268" duration="645000" />
     </task>
     <servers />
   </component>
@@ -740,7 +739,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21227000" />
+    <option name="totallyTimeSpent" value="21282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -922,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/PlayerShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="41" column="19" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Boat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -947,6 +936,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="753">
           <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/PlayerShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="77" column="72" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

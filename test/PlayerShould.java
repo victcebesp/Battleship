@@ -75,7 +75,7 @@ public class PlayerShould {
     }
 
     @Test
-    public void foo3 (){
+    public void not_have_two_overlapping_coordinates_for_different_boats (){
         List<Coordinate> coordinates = Arrays.asList(new Coordinate(0,0), new Coordinate(0,1));
         player.placeBoat(new Boat(coordinates));
 
