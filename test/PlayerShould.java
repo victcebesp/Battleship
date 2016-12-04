@@ -11,13 +11,6 @@ public class PlayerShould {
 
     /**
      * TODO PLAYER
-     *  - Barcos de distintas coordenadas creados bien (2 / 3 / 4 / 5)
-     *  - No sobreescribir coordenadas
-     *  - No pueden haber barcos de longitud mayor a 5 o menor de 2
-     *  - Solo puede haber 3 barcos de longitud 2
-     *  - Solo puede haber 2 barcos de longitud 3
-     *  - Solo puede haber 2 barcos de longitud 4
-     *  - Solo puede haber 1 barco de longitud 5
      *
      *  - Cuando haya situado todos los barcos pasa a JUEGO
      *  - En modo JUEGO no puede añadir barcos nuevos
