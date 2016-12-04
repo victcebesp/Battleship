@@ -50,7 +50,7 @@ public class Player {
             return;
         }
 
-        Boolean found = lookForOverlappedCoordinatesIn(boat);
+        Boolean found = lookForOverlappedCoordinates(boat);
 
         if (!found && pendingBoatsList.remove(translate.get(boat.length()))){
             board.add(boat);
@@ -58,7 +58,7 @@ public class Player {
 
     }
 
-    private boolean lookForOverlappedCoordinatesIn(Boat boat) {
+    private boolean lookForOverlappedCoordinates(Boat boat) {
         return boat.getCoordinates().stream().anyMatch(coordinate1 -> {
             for(Coordinate coordinate2 : getAllCoordinates()) {
                 if(coordinate1.equals(coordinate2)) return true;
