@@ -37,16 +37,18 @@ public class Player {
     }
 
     public void placeBoat(Boat boat) {
-        if (translate.get(boat.length()) == null){
-            return;
-        }
-
         Boolean found = lookForOverlappedCoordinates(boat);
-
-        if (!found && pendingBoatsList.remove(translate.get(boat.length()))){
+        if (theBoatIsValid(boat, found)){
             board.add(boat);
         }
+    }
 
+    private boolean theBoatIsValid(Boat boat, Boolean found) {
+        return !found && pendingBoatsList.remove(translate.get(boat.length())) && !theBoatHasInvalidLength(boat);
+    }
+
+    private boolean theBoatHasInvalidLength(Boat boat) {
+        return translate.get(boat.length()) == null;
     }
 
     private void fillTranslator() {
