@@ -13,25 +13,16 @@ public class Player {
 
     public Player(){
         currentState = State.PLACING;
+
         pendingBoatsList = new ArrayList<>();
-        pendingBoatsList.add(BoardType.TWO);
-        pendingBoatsList.add(BoardType.TWO);
-        pendingBoatsList.add(BoardType.TWO);
-        pendingBoatsList.add(BoardType.THREE);
-        pendingBoatsList.add(BoardType.THREE);
-        pendingBoatsList.add(BoardType.FOUR);
-        pendingBoatsList.add(BoardType.FOUR);
-        pendingBoatsList.add(BoardType.FIVE);
+        fillPendingBoatsList();
 
         board = new ArrayList<>();
 
         translate = new TreeMap<>();
-        translate.put(2, BoardType.TWO);
-        translate.put(3, BoardType.THREE);
-        translate.put(4, BoardType.FOUR);
-        translate.put(5, BoardType.FIVE);
-
+        fillTranslator();
     }
+
 
     public State getState() {
         return currentState;
@@ -56,6 +47,24 @@ public class Player {
             board.add(boat);
         }
 
+    }
+
+    private void fillTranslator() {
+        translate.put(2, BoardType.TWO);
+        translate.put(3, BoardType.THREE);
+        translate.put(4, BoardType.FOUR);
+        translate.put(5, BoardType.FIVE);
+    }
+
+    private void fillPendingBoatsList() {
+        pendingBoatsList.add(BoardType.TWO);
+        pendingBoatsList.add(BoardType.TWO);
+        pendingBoatsList.add(BoardType.TWO);
+        pendingBoatsList.add(BoardType.THREE);
+        pendingBoatsList.add(BoardType.THREE);
+        pendingBoatsList.add(BoardType.FOUR);
+        pendingBoatsList.add(BoardType.FOUR);
+        pendingBoatsList.add(BoardType.FIVE);
     }
 
     private boolean lookForOverlappedCoordinates(Boat boat) {
