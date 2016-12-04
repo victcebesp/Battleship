@@ -1,4 +1,9 @@
-import java.util.*;
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 public class Player {
 
@@ -42,14 +47,23 @@ public class Player {
             return;
         }
 
+        List<Coordinate> allCoordinates = board.stream()
+                .flatMap(boat1 -> boat1.getCoordinates().stream())
+                .collect(Collectors.toList());
+
+        Boolean found = boat.getCoordinates().stream().anyMatch(coordinate1 -> {
+            for(Coordinate coordinate2 : allCoordinates) {
+                if(coordinate1.equals(coordinate2)) return true;
+            }
+            return false;
+        });
 
 
-        if (pendingBoatsList.remove(translate.get(boat.length()))){
+        if (!found && pendingBoatsList.remove(translate.get(boat.length()))){
             board.add(boat);
         }
 
     }
-
 
     public List<Boat> board() {
         return board;

@@ -7,4 +7,18 @@ public class Coordinate {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
     }
+
+    public int getxPosition(){
+        return xPosition;
+    }
+
+    public int getyPosition(){
+        return yPosition;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        Coordinate coordinate = (Coordinate)o;
+        return this.xPosition == coordinate.getxPosition() && this.yPosition == coordinate.getyPosition();
+    }
 }

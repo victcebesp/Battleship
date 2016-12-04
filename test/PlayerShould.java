@@ -43,7 +43,7 @@ public class PlayerShould {
         List<Coordinate> coordinates = Arrays.asList(new Coordinate(0,0), new Coordinate(0,1));
         player.placeBoat(new Boat(coordinates));
 
-        assertEquals(7, player.pendingBoats());
+    assertEquals(7, player.pendingBoats());
         assertEquals(1, player.board().size());
     }
 

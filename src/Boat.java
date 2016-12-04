@@ -10,4 +10,8 @@ public class Boat {
     public Integer length() {
         return coordinatesList.size();
     }
+
+    public List<Coordinate> getCoordinates(){
+        return coordinatesList;
+    }
 }
