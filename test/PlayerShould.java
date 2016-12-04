@@ -39,7 +39,7 @@ public class PlayerShould {
     }
 
     @Test
-    public void foo(){
+    public void be_able_to_place_one_less_boat_when_a_boat_is_placed(){
         List<Coordinate> coordinates = Arrays.asList(new Coordinate(0,0), new Coordinate(0,1));
         player.placeBoat(new Boat(coordinates));
 
@@ -48,7 +48,7 @@ public class PlayerShould {
     }
 
     @Test
-    public void foo2(){
+    public void not_be_able_to_place_more_boats_of_the_same_type_than_restricted_number(){
         List<Coordinate> coordinates = Arrays.asList(new Coordinate(0,0), new Coordinate(0,1));
         player.placeBoat(new Boat(coordinates));
 
