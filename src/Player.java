@@ -37,10 +37,13 @@ public class Player {
     }
 
     public void placeBoat(Boat boat) {
-        Boolean found = lookForOverlappedCoordinates(boat);
-        if (theBoatIsValid(boat, found)){
-            board.add(boat);
+
+        if (pendingBoatsList.size() == 1){
+            currentState = State.PLAYING;
         }
+
+        Boolean found = lookForOverlappedCoordinates(boat);
+        if (theBoatIsValid(boat, found)) board.add(boat);
     }
 
     private boolean theBoatIsValid(Boat boat, Boolean found) {

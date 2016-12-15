@@ -1,3 +1,4 @@
 enum State {
-    PLACING;
+    PLACING,
+    PLAYING;
 }

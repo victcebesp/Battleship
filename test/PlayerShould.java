@@ -82,5 +82,57 @@ public class PlayerShould {
         assertEquals(1, player.board().size());
     }
 
+    @Test
+    public void change_to_playing_mode_when_all_boats_have_been_placed (){
+        List<Coordinate> coordinates = Arrays.asList(new Coordinate(0,0),new Coordinate(0,1));
+        List<Coordinate> coordinates1 = Arrays.asList(new Coordinate(1,0),new Coordinate(2,0));
+        List<Coordinate> coordinates2 = Arrays.asList(new Coordinate(3,0),new Coordinate(3,1));
+        player.placeBoat(new Boat(coordinates));
+        player.placeBoat(new Boat(coordinates1));
+        player.placeBoat(new Boat(coordinates2));
+
+        List<Coordinate> coordinates3 = Arrays.asList(new Coordinate(4,0),
+                new Coordinate(4,1),
+                new Coordinate(4,2));
+
+        List<Coordinate> coordinates4 = Arrays.asList(new Coordinate(2,4),
+                new Coordinate(3,4),
+                new Coordinate(4,4));
+        player.placeBoat(new Boat(coordinates3));
+        player.placeBoat(new Boat(coordinates4));
+
+        List<Coordinate> coordinates5 = Arrays.asList(new Coordinate(5,0),
+                new Coordinate(5,1),
+                new Coordinate(5,2),
+                new Coordinate(5,3));
+
+        List<Coordinate> coordinates6 = Arrays.asList(new Coordinate(0,7),
+                new Coordinate(1,7),
+                new Coordinate(2,7),
+                new Coordinate(3,7));
+        player.placeBoat(new Boat(coordinates5));
+        player.placeBoat(new Boat(coordinates6));
+        assertEquals(State.PLACING, player.getState());
+
+        List<Coordinate> coordinates7 = Arrays.asList(new Coordinate(1,5),
+                new Coordinate(2,5),
+                new Coordinate(3,5),
+                new Coordinate(4,5),
+                new Coordinate(5,5));
+        player.placeBoat(new Boat(coordinates7));
+
+        assertEquals(0,player.pendingBoats());
+        assertEquals(8, player.board().size());
+        assertEquals(State.PLAYING, player.getState());
+
+        List<Coordinate> coordinates8 = Arrays.asList(new Coordinate(2,0),new Coordinate(7,7));
+        player.placeBoat(new Boat(coordinates8));
+
+        assertEquals(0, player.pendingBoats());
+        assertEquals(8, player.board().size());
+        assertEquals(State.PLAYING, player.getState());
+
+    }
+
 
 }
